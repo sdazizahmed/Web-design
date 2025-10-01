@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Photography</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header" role="banner">
+        <div class="wrap header-content">
+          <div class="logo-section">
+            <img src="images/logo.png" alt="All About Photography logo" width="56" height="56" />
+            <h1 class="site-title">All About Photography</h1>
+          </div>
+
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+          <label for="nav-toggle" class="menu-button" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6h18M3 12h18M3 18h18"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="sr-only">Menu</span>
+          </label>
+
+          <nav id="primary-nav" class="site-nav" aria-label="Primary">
+            <ul>
+              <li><a href="#history">History</a></li>
+              <li><a href="#styles">Styles</a></li>
+              <li><a href="#beginners">Tips</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section id="history" class="clearfix">
+          <h2>History of Photography</h2>
+          <img src="images/history.jpeg" alt="Old Camera" class="float-left" />
+          <p>
+            Photography was first invented in the early 19th century. The very
+            first photographs were black and white and required long exposure
+            times. Over the years, technology improved, leading to film cameras
+            and later digital cameras. Photography has not only captured history
+            but also shaped the way humans tell stories.
+          </p>
+          <p>
+            The first permanent photograph was captured in 1826 by Joseph
+            Nicéphore Niépce using a process called heliography. This
+            breakthrough paved the way for further developments by Louis
+            Daguerre and William Henry Fox Talbot, who created more practical
+            photographic processes in the 1830s.
+          </p>
+          <p>
+            The invention of roll film by George Eastman in the 1880s made
+            photography accessible to amateurs, leading to the creation of the
+            Kodak company. The 20th century saw rapid advancements with 35mm
+            cameras, color film, and eventually the digital revolution that
+            transformed photography into the ubiquitous medium it is today.
+          </p>
+        </section>
+
+        <section id="styles" class="clearfix">
+          <h2>Modern Styles</h2>
+          <img
+            src="images/styles.jpeg"
+            alt="Photography Styles"
+            class="float-right"
+          />
+          <p>
+            Today, photography is a creative art form used by both professionals
+            and hobbyists. Portrait photography focuses on people and emotions,
+            while landscape photography captures the beauty of nature. Street
+            photography documents daily life, and macro photography allows us to
+            explore small details like flowers and insects.
+          </p>
+          <p>
+            Other popular styles include architectural photography, which
+            highlights the design and structure of buildings; wildlife
+            photography, which requires patience and skill to capture animals in
+            their natural habitats; and documentary photography, which tells
+            stories about real-life situations and events.
+          </p>
+          <p>
+            Each style offers a different way of looking at the world, making
+            photography a versatile and exciting field. With the advent of new
+            technologies like drone photography and computational photography,
+            the possibilities continue to expand, offering fresh perspectives
+            and creative opportunities for photographers of all levels.
+          </p>
+        </section>
+
+        <section id="beginners">
+          <h2>Tips for Beginners</h2>
+          <img
+            src="images/tips.jpeg"
+            alt="Beginner Photographer"
+            class="float-left"
+          />
+          <p>
+            If you are new to photography, start simple. Use natural light
+            whenever possible and avoid using flash indoors. Learn the rule of
+            thirds to improve composition, and keep your hands steady or use a
+            tripod to avoid blurry photos.
+          </p>
+          <p>
+            Most importantly, practice often. Take pictures every day,
+            experiment with angles and lighting, and review your results to see
+            how you can improve. The best way to learn photography is by doing
+            it!
+          </p>
+
+          <div class="tips-container">
+            <div class="tip-card">
+              <h3>Master Composition</h3>
+              <p>
+                Learn about leading lines, framing, and the rule of thirds to
+                create visually appealing images.
+              </p>
+            </div>
+            <div class="tip-card">
+              <h3>Understand Lighting</h3>
+              <p>
+                Golden hour (just after sunrise or before sunset) provides the
+                most flattering natural light.
+              </p>
+            </div>
+            <div class="tip-card">
+              <h3>Experiment with Settings</h3>
+              <p>
+                Try shooting in manual mode to understand how aperture, shutter
+                speed, and ISO work together.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery">
+          <h2>Photo Gallery</h2>
+          <p>Explore these examples of different photography styles:</p>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/portrait.jpg" alt="Portrait Photography" />
+              <p>Portrait</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/landscape.jpg" alt="Landscape Photography" />
+              <p>Landscape</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/macro.jpg" alt="Macro Photography" />
+              <p>Macro</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/street.jpg" alt="Street Photography" />
+              <p>Street</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/wildlife.jpeg" alt="Wildlife Photography" />
+              <p>Wildlife</p>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/architecture.jpg"
+                alt="Architectural Photography"
+              />
+              <p>Architecture</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <p>Made by Aziz Syed | Contact: syedazi@cua.edu</p>
+          <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
