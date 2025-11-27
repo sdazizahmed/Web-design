@@ -111,5 +111,85 @@
         </div>
       </footer>
     </div>
+        <!-- Load the data object -->
+    <script src="data/content.js"></script>
+
+    <!-- Script that uses the data + templates -->
+    <script>
+      // Make sure pageContent exists
+      // HISTORY
+      const historyHeading = document.getElementById("history-heading");
+      const historyImage = document.getElementById("history-image");
+      const historyText = document.getElementById("history-text");
+
+      historyHeading.textContent = pageContent.history.heading;
+      historyImage.src = pageContent.history.image.src;
+      historyImage.alt = pageContent.history.image.alt;
+      pageContent.history.paragraphs.forEach((p) => {
+        const para = document.createElement("p");
+        para.textContent = p;
+        historyText.appendChild(para);
+      });
+
+      // STYLES
+      const stylesHeading = document.getElementById("styles-heading");
+      const stylesImage = document.getElementById("styles-image");
+      const stylesText = document.getElementById("styles-text");
+
+      stylesHeading.textContent = pageContent.styles.heading;
+      stylesImage.src = pageContent.styles.image.src;
+      stylesImage.alt = pageContent.styles.image.alt;
+      pageContent.styles.paragraphs.forEach((p) => {
+        const para = document.createElement("p");
+        para.textContent = p;
+        stylesText.appendChild(para);
+      });
+
+      // TIPS (intro text)
+      const tipsHeading = document.getElementById("tips-heading");
+      const tipsImage = document.getElementById("tips-image");
+      const tipsIntro = document.getElementById("tips-intro");
+
+      tipsHeading.textContent = pageContent.tipsIntro.heading;
+      tipsImage.src = pageContent.tipsIntro.image.src;
+      tipsImage.alt = pageContent.tipsIntro.image.alt;
+      pageContent.tipsIntro.paragraphs.forEach((p) => {
+        const para = document.createElement("p");
+        para.textContent = p;
+        tipsIntro.appendChild(para);
+      });
+
+      // TIPS (reusable cards)
+      const tipsContainer = document.getElementById("tips-container");
+      const tipTemplate = document.getElementById("tip-card-template");
+
+      pageContent.tipCards.forEach((tip) => {
+        const clone = tipTemplate.content.cloneNode(true);
+        clone.querySelector(".tip-title").textContent = tip.title;
+        clone.querySelector(".tip-text").textContent = tip.text;
+        tipsContainer.appendChild(clone);
+      });
+
+      // GALLERY
+      const galleryHeading = document.getElementById("gallery-heading");
+      const galleryIntro = document.getElementById("gallery-intro");
+      const galleryGrid = document.getElementById("gallery-grid");
+      const galleryItemTemplate = document.getElementById("gallery-item-template");
+
+      galleryHeading.textContent = pageContent.gallery.heading;
+      galleryIntro.textContent = pageContent.gallery.intro;
+
+      pageContent.gallery.items.forEach((item) => {
+        const clone = galleryItemTemplate.content.cloneNode(true);
+        const img = clone.querySelector(".gallery-image");
+        const label = clone.querySelector(".gallery-label");
+
+        img.src = item.image;
+        img.alt = item.alt;
+        label.textContent = item.label;
+
+        galleryGrid.appendChild(clone);
+      });
+    </script>
   </body>
 </html>
