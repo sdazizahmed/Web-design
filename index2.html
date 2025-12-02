@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All About Photography</title>
-    <link rel="stylesheet" href="styles.css" /><!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6B703NBKH"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H6B703NBKH"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-H6B703NBKH');
+      gtag("config", "G-H6B703NBKH");
     </script>
-
   </head>
 
   <body>
@@ -21,15 +26,29 @@
       <header class="site-header" role="banner">
         <div class="wrap header-content">
           <div class="logo-section">
-            <img src="images/logo.png" alt="All About Photography logo" width="56" height="56" />
+            <img
+              src="images/logo.png"
+              alt="All About Photography logo"
+              width="56"
+              height="56"
+            />
             <h1 class="site-title">All About Photography</h1>
           </div>
 
-          <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+          <input
+            type="checkbox"
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+          />
           <label for="nav-toggle" class="menu-button" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M3 6h18M3 12h18M3 18h18"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path
+                d="M3 6h18M3 12h18M3 18h18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
             </svg>
             <span class="sr-only">Menu</span>
           </label>
@@ -56,24 +75,14 @@
         <!-- Styles section stays mostly static -->
         <section id="styles" class="clearfix">
           <h2 id="styles-heading"></h2>
-          <img
-            id="styles-image"
-            src=""
-            alt=""
-            class="float-right"
-          />
+          <img id="styles-image" src="" alt="" class="float-right" />
           <div id="styles-text"></div>
         </section>
 
         <!-- Tips section: intro text + reusable tip cards -->
         <section id="beginners">
           <h2 id="tips-heading"></h2>
-          <img
-            id="tips-image"
-            src=""
-            alt=""
-            class="float-left"
-          />
+          <img id="tips-image" src="" alt="" class="float-left" />
           <div id="tips-intro"></div>
 
           <!-- Empty container to be filled with tip-card templates -->
@@ -119,9 +128,26 @@
         </div>
       </footer>
     </div>
-        <!-- Load the data object -->
-    <script src="data/content.js"></script>
+    <!-- Modal Trigger Button -->
+    <button id="openModalBtn" class="modal-open-btn">Open Modal</button>
 
+    <!-- Modal Background -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2>Modal Window</h2>
+          <button id="closeModalBtn" class="close-btn">✖</button>
+        </header>
+
+        <div class="modal-body">
+          <p>This is a modal window. Please click on the X button to continue!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load the data object -->
+    <script src="data/content.js"></script>
+    <script src="modal.js"></script>
     <!-- Script that uses the data + templates -->
     <script>
       // Make sure pageContent exists
@@ -182,7 +208,9 @@
       const galleryHeading = document.getElementById("gallery-heading");
       const galleryIntro = document.getElementById("gallery-intro");
       const galleryGrid = document.getElementById("gallery-grid");
-      const galleryItemTemplate = document.getElementById("gallery-item-template");
+      const galleryItemTemplate = document.getElementById(
+        "gallery-item-template"
+      );
 
       galleryHeading.textContent = pageContent.gallery.heading;
       galleryIntro.textContent = pageContent.gallery.intro;

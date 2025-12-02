@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>File System Viewer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* small extra styles just for the tree */
+    .file-system {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fafafa;
+      font-family: system-ui, sans-serif;
+    }
+
+    .file-system ul {
+      list-style: none;
+      padding-left: 1.2rem;
+    }
+
+    .file-system li {
+      margin: 0.1rem 0;
+    }
+
+    .folder::before {
+      content: "📁 ";
+    }
+
+    .file::before {
+      content: "📄 ";
+    }
+
+    .folder-name {
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <div class="wrap header-content">
+        <h1 class="site-title">File System Viewer</h1>
+      </div>
+    </header>
+
+    <main class="file-system">
+      <h2>Nested File System</h2>
+      <div id="file-system-root"></div>
+    </main>
+  </div>
+
+  <!-- load the file system data -->
+  <script src="data/fileSystem.js"></script>
+  <!-- render it -->
+  <script src="filesystem.js"></script>
+</body>
+</html>

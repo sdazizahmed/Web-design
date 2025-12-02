@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .api-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .api-gallery img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <main class="site-container">
+    <h1>API Image Gallery</h1>
+    <div id="apiGallery" class="api-gallery"></div>
+  </main>
+
+  <script src="api-gallery.js"></script>
+</body>
+</html>
